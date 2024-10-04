@@ -1,4 +1,4 @@
-name: contact_graspnet_env
+name: graspnet
 channels:
   - conda-forge
   - anaconda
