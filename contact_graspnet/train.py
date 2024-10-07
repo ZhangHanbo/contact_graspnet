@@ -21,11 +21,11 @@ TF2 = True
 physical_devices = tf.config.experimental.list_physical_devices('GPU')
 tf.config.experimental.set_memory_growth(physical_devices[0], True)
     
-import config_utils
-from data import PointCloudReader, load_scene_contacts, center_pc_convert_cam
-from summaries import build_summary_ops, build_file_writers
-from tf_train_ops import load_labels_and_losses, build_train_op
-from contact_grasp_estimator import GraspEstimator
+import contact_graspnet.config_utils as config_utils
+from contact_graspnet.data import PointCloudReader, load_scene_contacts, center_pc_convert_cam
+from contact_graspnet.summaries import build_summary_ops, build_file_writers
+from contact_graspnet.tf_train_ops import load_labels_and_losses, build_train_op
+from contact_graspnet.contact_grasp_estimator import GraspEstimator
 
 def train(global_config, log_dir):
     """

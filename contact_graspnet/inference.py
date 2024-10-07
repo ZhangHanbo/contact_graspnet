@@ -14,10 +14,10 @@ tf.config.experimental.set_memory_growth(physical_devices[0], True)
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.append(os.path.join(BASE_DIR))
-import config_utils
-from data import regularize_pc_point_count, depth2pc, load_available_input_data
+import contact_graspnet.config_utils as config_utils
+from contact_graspnet.data import regularize_pc_point_count, depth2pc, load_available_input_data
 
-from contact_grasp_estimator import GraspEstimator
+from contact_graspnet.contact_grasp_estimator import GraspEstimator
 # from visualization_utils import visualize_grasps, show_image
 
 def inference(
